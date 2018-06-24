@@ -5,14 +5,14 @@ Initkeyboardspeed creates a software package for your Debian based system, which
 
 The package has been tested with several versions of Debian and Ubuntu.
 
-When installed to your Debian based system, keyboard speeds to the console is set with "kbdrate". Takes effect on reboot.
+When installed to your Debian based system, keyboard speed to the console is set with "kbdrate". Takes effect on reboot.
 
 To create a debian package enter
 ```
-debuild
+debuild -i -us -uc -b
 ```
 
-Then you can install it with
+Then you can install it with (as super user)
 ```
 dpkg -i ../initkeyboardspeed*.deb
 ```

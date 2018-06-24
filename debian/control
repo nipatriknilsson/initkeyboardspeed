@@ -1,0 +1,22 @@
+Source: initkeyboardspeed
+Section: utils
+Priority: optional
+Maintainer: Patrik Nilsson <nipatriknilsson@gmail.com>
+Build-Depends: debhelper (>=9)
+Standards-Version: 3.9.2
+
+
+Package: initkeyboardspeed
+Architecture: all
+Section: utils
+Depends: kbd
+Description: Sets delay and rate of keyboard during upstart
+ The delay and rate of the keyboard are set to be easier used
+ with cryptsetup and console.
+ .
+ Normally these settings are set to highest speed, which can make
+ the keyboard hard to use.
+ .
+ Typing several characters accidentally is prevented by modifying
+ the keyboard rates.
+

@@ -15,4 +15,5 @@ debuild -i -us -uc -b
 Then you can install it with (as super user)
 ```
 dpkg -i ../initkeyboardspeed*.deb
+dpkg --configure -a
 ```

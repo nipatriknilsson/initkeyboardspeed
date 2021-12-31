@@ -1,4 +1,4 @@
 #!/usr/bin/dh-exec
 hook.sh => /etc/initramfs-tools/hooks/kbdrate.sh
-boot.sh => /etc/initramfs-tools/scripts/local-top/kbdrate.sh
-
+start.sh => /etc/initramfs-tools/scripts/local-top/kbdrate.sh
+stop.sh => /etc/initramfs-tools/scripts/local-bottom/kbdrate.sh

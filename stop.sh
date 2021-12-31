@@ -15,12 +15,9 @@ prereqs)
 esac
 
 # Begin real processing below this line
-if [ ! -x "/sbin/kbdrate" ]; then
-   panic "/sbin/kbdrate executable not found"
-fi
 
-# log_begin_msg "Starting /sbin/kbdrate"
-/sbin/kbdrate -r 20 -d 2000 || panic "/sbin/kbdrate failed"
+# log_begin_msg "Stopping /sbin/kbdrate"
+/sbin/find /sys/class/leds -mindepth 1 -maxdepth 1 -name '*kbd_backlight' 2>/dev/null | /sbin/xargs -r -I '{}' -- "/sbin/kbdbacklightledoff" '{}'
 # log_end_msg
 
 exit 0
